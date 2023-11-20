@@ -7,7 +7,7 @@ Ce projet vise à créer une base de données pour la gestion d'événements ave
 
 Le Modèle Conceptuel de Données décrit les entités, les relations du système.
 
-![MCD Image](C:\Users\Youcode\Desktop\sql projet\images\mld.png)
+![](C:\Users\Youcode\Desktop\sql projet\images\mld.png)
 
 Les principales entités incluent Organister , Événement, et Participants ,local,Forniseur . Les relations sont représentées avec les cardinalités correspondantes.
 
@@ -15,7 +15,7 @@ Les principales entités incluent Organister , Événement, et Participants ,loc
 
 Le Modèle Logique de Données se base sur le MCD pour définir les tables, les clés primaires et étrangères.
 
-![MLD Image](C:\Users\Youcode\Desktop\sql projet\images\mld.png)
+!(C:\Users\Youcode\Desktop\sql projet\images\mld.png)
 
 ## Scripts SQL
 
