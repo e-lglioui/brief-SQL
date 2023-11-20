@@ -2,62 +2,62 @@
 create database brief5;
 -----------------------create tableau -----------------
 create table organisateur(
-     id int primary key auto-increment ,
+     id int primary key AUTO_INCREMENT ,
     nom varchar(20),
     prenom varchar(20),
     email varchar(20),
-    tel int,
+    tel int
 );
 create table sponseur(
-    id int primary key auto-increment ,
+    id int primary key AUTO_INCREMENT,
     nom varchar(20),
     prenom varchar(20),
     email varchar(20),
-    tel int,
+    tel int
 
 );
 create table participons (
-    id int primary key auto-increment ,
+    id int primary key AUTO_INCREMENT,
     nom varchar(20),
     prenom varchar(20),
     email varchar(20),
-    tel int,
+    tel int
 
 );
 create table lieu(
-    id int primary key auto-increment ,
+    id int primary key AUTO_INCREMENT,
     nom varchar(20),
-    paye varchar(20),
-    
+    paye varchar(20)
+
 );
 create table evenement (
-    id int primary key auto-increment ,
+    id int primary key AUTO_INCREMENT,
     nom varchar(20),
     activete varchar(20) ,
-    lieu-id int ,
-    FOREIGN KEY (lieu-id ) REFERENCES lieu (id),
+    lieu_id int ,
+    FOREIGN KEY (lieu_id ) REFERENCES lieu (id)
 );
 
 create table partecipations(
-    id int primary key auto-increment ,
-    participons -id int ,
-    FOREIGN KEY (participons -id ) REFERENCES participons (id),
-    evenement -id int ,
-    FOREIGN KEY (evenement -id) REFERENCES  evenement(id),
+    id int primary key AUTO_INCREMENT,
+    participons_id int ,
+    FOREIGN KEY (participons_id ) REFERENCES participons (id),
+    evenement_id int ,
+    FOREIGN KEY (evenement_id) REFERENCES  evenement(id)
 );
 create table organisation(
-    id int primary key auto-increment ,
-    evenement -id int ,
-    FOREIGN KEY (evenement -id) REFERENCES  evenement(id),
-    organisateur -id int ,
-    FOREIGN KEY (organisateur -id) REFERENCES organisateur (id),
+    id int primary key auto_increment ,
+    evenement_id int ,
+    FOREIGN KEY (evenement_id) REFERENCES  evenement(id),
+    organisateur_id int ,
+    FOREIGN KEY (organisateur_id) REFERENCES organisateur (id)
 );
 create table sponsorisation(
-    id int primary key auto-increment ,
-    evenement -id int ,
-    FOREIGN KEY (evenement -id) REFERENCES  evenement(id),
-    sponseur -id int ,
-    FOREIGN KEY (sponseur-id) REFERENCES sponseur(id),
+    id int primary key auto_increment ,
+    evenement_id int ,
+    FOREIGN KEY (evenement_id) REFERENCES  evenement(id),
+    sponseur_id int ,
+    FOREIGN KEY (sponseur_id) REFERENCES sponseur(id)
 );
 
 
