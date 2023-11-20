@@ -1,5 +1,5 @@
 -----------------------create database-----------------
-create database brief5;
+create database connectevent;
 -----------------------create tableau -----------------
 create table organisateur(
      id int primary key AUTO_INCREMENT ,
@@ -75,28 +75,28 @@ VALUES
   ('oussama ', 'belm', 'oussama@email.com', 987112233);
 
 --------------------------- Insertion de données dans la table participons-----------------------
-INSERT INTO participons (nom, prenom, email, tel)
+INSERT INTO partecipons (nom, prenom, email, tel)
 VALUES
   ( 'ibtissam', 'alhani', 'ibtessam@email.com', 444987654),
   ('tayeb', 'souini', 'suini@email.com', 789456123);
 
 ---------------------------- Insertion de données dans la table lieu------------------------
-INSERT INTO lieu (nom, pays)
+INSERT INTO lieu (nom, paye)
 VALUES
   ('Salle A', 'youcode'),
   ('salle 3 igli', 'Canada');
 
 --------------------------- Insertion de données dans la table evenement---------------------
-INSERT INTO evenement (nom, activite, lieu_id)
+INSERT INTO evenement (nom,  activete , lieu_id)
 VALUES
   ('Conférence Tech', 'workshop in js', 1),
   ('Atelier Marketing', 'workshop in marketing', 2);
 
 -- Insertion de données dans la table participations
-INSERT INTO participations (participant_id, evenement_id)
+INSERT INTO participations ( participons_id, evenement_id)
 VALUES
   (1, 1),  ------------------  ibtissam participe à la Conférence Tech--------------
-  (2, 1),  -- ------------------------tayebparticipe également à la Conférence Tech------------------
+  (2, 1);  -- ------------------------tayebparticipe également à la Conférence Tech------------------
   
 
 -- Insertion de données dans la table organisation
@@ -106,9 +106,23 @@ VALUES
   (2, 2);  ------------------------L'Atelier Marketing est organisé par zineb-------------------------
 
 -- Insertion de données dans la table sponsorisation
-INSERT INTO sponsorisation (evenement_id, sponsor_id)
+INSERT INTO sponsorisation (evenement_id,  sponseur_id )
 VALUES
   (1, 1),  -----------------------------La Conférence Tech est sponsorisée par fatimazahra elglioui------------------------------
   (2, 2);  ------------------------------- L'Atelier Marketing est sponsorisé par Tech Solutions--------------------------------------------;
 
- ---------------------selection------------------------------
+ ---------------------selection------------------------
+ SELECT evenement.nom FROM evenement
+ SELECT  evenement.nom FROM evenement ORDER BY id DESC LIMIT 1 
+  SELECT  evenement.nom FROM evenement ORDER BY id  LIMIT 1 
+  SELECT DISTINCT  sponseur.nom FROM sponseur where sponseur.id =1 
+  --------------------delet----------------------------------- 
+ DELETE FROM organisateur WHERE organisateur.nom='salima bouhamidi';
+ DELETE FROM sponseur WHERE id=2;
+
+  -------------------updat-------------------------------------
+UPDATE organisateur
+SET id = 4, nom = salek elfahim
+WHERE id =1;
+
+
